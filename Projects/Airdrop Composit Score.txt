@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+    // Criteria
+    int early = 30; // 10 or 20 or 30
+    int ML =30;  //30
+    int Fg20 = 0;  //10
+    int Fg40 =0;  //10
+    int Fg100 = 0; //10
+    int Fg150 = 0; //20
+    int n= 1; //n upto 3
+    int nT1VC = 10 * n;
+    //
+
+// For Points Brownie points If Airdrop campaign ends quicker
+// Example - $ENA
+// For projects with token if good FDV and good amount reserved for commnity go for it
+// Example - $MNT, $AEVO
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    int s = ML + Fg20 + Fg40 + Fg100 + Fg150 + nT1VC + early;
+    cout << "Composit Score : "<< s <<endl;
+    if (s >= 50){
+        cout << "PASS"<<endl;
+    }
+    else{
+        cout << "FAIL"<<endl;
+    }
+    int p = (s/140.0)*100.0;
+    cout << p <<"%";
+}

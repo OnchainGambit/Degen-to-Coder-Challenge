@@ -1,0 +1,26 @@
+Article Link : https://bitcoinmagazine.com/culture/diy-bitcoin-private-key-project
+
+Video Guide : https://www.youtube.com/watch?v=LxTkLwpV1Po&list=LL&index=5
+
+Steps Summary :-
+
+1. Generate Seed Phrase in Binary
+
+	Get a Pen, Paper and Coin Flip it, if heads 1 if tails 0
+	Generate for 23 rows with each row having 11 turns/columns.
+	And only 3 for 24th row. We need 8 more bits to get the 24th word.
+
+2. Generating 24th Word
+
+	We will basically generate a string using hashing of sha sum 256 algo
+	Go to any Terminal of linus or mac type
+	echo [All Your Binary Bits] | shasum -a 256 -0
+	This will Generate a string, take the first 2 chars of it
+	Convert each char from Hexadecimal to Binary, concat that to 3 bits of 24th word
+
+3. Convert Binary to Decimal for Each Row
+
+4. Get the BIP-39 word corresponding the Decimal
+	Add 1 to the decimal as you can even get 0 but the list starts
+	with 1.
+	BIP-39 Word List : https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt
